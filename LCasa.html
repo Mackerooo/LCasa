@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L Casa Private Villa - Home</title>
+  <link rel="stylesheet" href="LCasa.css">
+  <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="Lcasa Logo.jpg">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="container">
+    <a href="https://www.facebook.com/profile.php?id=61562168732007">
+      <img src="Lcasa Logo.jpg" alt="Logo" class="logo">
+    </a>
+    <!-- Hamburger Menu Button -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
+      <ul>
+        <!-- Change href to point to the Home section by ID -->
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#gallary">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  // Get all navbar links
+  const navLinks = document.querySelectorAll('.navbar nav ul li a');
+
+  // Loop through links and add click event listeners
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      // Prevent default jump behavior for links
+      e.preventDefault();
+
+      // Smoothly scroll to the targeted section
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove 'active' class from all links
+      navLinks.forEach(nav => nav.classList.remove('active'));
+
+      // Add 'active' class to the clicked link
+      this.classList.add('active');
+    });
+  });
+</script>
+
+<!-- Home Section -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1 class="name">L <span class="orange-color"> Casa</span></h1>
+    <h2 class="casa"><span class="orange-color">PRIVATE</span> VILLA</h2>
+    <p class="tag">Where tranquility meets luxury<br>Come and experience our cozy and comfy staycation house</p>
+  </div>
+</section>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
+
+<!-- Why choose -->
+<section class="Rent">
+    <div class="rent-container" style="display: flex; align-items: center; gap: 20px;">
+  
+      <div class="rent-text" style="flex: 1;">
+        <h1><span class="orange-color">Why </span>Why Choose <span class="orange-color"> Us!</span></h1>
+        <p>Welcome to your perfect getaway in Daet, Camarines Norte! Our stay house offers the ideal combination of comfort, convenience, and affordability. Whether you're visiting for a relaxing vacation or a business trip, we have everything you need to feel at home.</p>
+        <ul>
+          <li><span class="orange-color">Prime Location:</span> Situated near popular attractions and essential amenities.</li>
+          <li><span class="orange-color">Fully Furnished:</span> Enjoy cozy bedrooms, a spacious living area, and a well-equipped kitchen.</li>
+          <li><span class="orange-color">Peaceful Ambience:</span> Perfect for unwinding after a day of exploring the vibrant town of Daet.</li>
+          <li><span class="orange-color">Affordable Rates:</span> Experience luxury living without breaking the bank.</li>
+          <li><span class="orange-color">Excellent Customer Service:</span> Our friendly staff is here to ensure your stay is unforgettable.</li>
+          <li><span class="orange-color">Swimming Pool:</span> Relax and have fun in our well-maintained pool, perfect for all ages.</li>
+        </ul>
+      </div>
+  
+      <div class="rent-image" style="flex: 1; text-align: center;">
+        <img src="choose.gif" alt="Stay house in Daet, Camarines Norte" style="max-width: 200%; border-radius: 20px;">
+      </div>
+  
+    </div>
+</section>
+
+<section class="about-us" id="about">
+    <h1 class="head">About Us</h1>
+    <div class="container-about">
+      <div class="about-text">
+        <p>L Casa Private Villa is your perfect getaway destination, offering a luxurious staycation experience. Nestled amidst serene surroundings, L Casa provides a unique blend of comfort and elegance. Whether you're looking to relax, celebrate, or spend quality time with loved ones, our villa is designed to meet all your needs. Come and enjoy an unforgettable stay with us!</p>
+      </div>
+      <div class="about-image">
+        <img class="img" src="homeg.gif" alt="L Casa Villa">
+      </div>
+    </div>
+</section>
+
+
+<!-- Gallery Section (Added ID) -->
+<section class="Gallery">
+    <h1 class="name">L <span class="orange-color">Casa</span></h1>
+    <h2 class="casa"><span class="orange-color">PRIVATE</span> VILLA</h2>
+    <p class="offer-text">
+        L Casa welcomes you to an exceptional retreat, where luxury and comfort are seamlessly blended to provide an unforgettable experience. With elegant suites, world-class amenities, and personalized service, every moment is designed to enhance your relaxation and indulgence. Whether you're unwinding by the pool or exploring the serene surroundings, L Casa ensures your stay is nothing short of extraordinary.
+    </p>
+    <div class="container">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="kitchen.jpg" alt="Kitchen">
+                <div class="description">Kitchen with Amenities</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Home bg.jpg" alt="Pool">
+                <div class="description">Pool Area</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bedroom.jpg" alt="Bedroom">
+                <div class="description">Cozy Bedroom for Comfort</div>
+            </div>
+            <div class="gallery-item">
+                <img src="livingroom.jpg" alt="Living Room">
+                <div class="description">Spacious Living Room</div>
+            </div>
+        </div>
+    </div>
+    <div class="see-more-container">
+        <a href="Gallary.html" class="see-more-button">See More</a>
+    </div>
+</section>
+
+
+<section class="Rates" id="rates">
+    <div class="Contain-rate">
+    <h1 class="header">Rental <span class="orange-color">Rate</span></h1>
+    <p class="intro-description">
+      Experience the ultimate in comfort and convenience at L Casa, where luxury meets affordability. Whether you're planning a weekend getaway or a day trip, our rental rates cater to all needs. Explore our competitive rates below and book your stay today!
+    </p>
+    <div class="container">
+      <div class="rate-details">
+        <h2>Monday to Thursday</h2>
+        <p>Check in: 3:00 pm</p>
+        <p>Check out: 12:00 nn</p>
+        <p><strong>PHP 8,000</strong></p>
+      </div>
+
+      <div class="rate-details">
+        <h2>Friday to Sunday</h2>
+        <p>Check in: 3:00 pm</p>
+        <p>Check out: 12:00 nn</p>
+        <p><strong>PHP 9,000</strong></p>
+      </div>
+
+      <div class="rate-details">
+        <h2>Day Rate</h2>
+        <p>Check in: 8:00 am</p>
+        <p>Check out: 5:00 pm</p>
+        <p><strong>PHP 5,000</strong></p>
+      </div>
+
+      <div class="rate-details">
+        <h2>Night Rate</h2>
+        <p>Check in: 7:00 pm</p>
+        <p>Check out: 6:00 am</p>
+        <p><strong>PHP 6,000</strong></p>
+      </div>
+    </div>
+    <div class="inquire-button">
+      <button onclick="location.href='https://www.facebook.com/profile.php?id=61562168732007'">INQUIRE NOW!</button>
+    </div>
+    </div>
+  </section>
+
+
+
+  <section class="gallery" id="gallary">
+    <h1 class="head"><span class="orange-color">L</span> Casa <span class="orange-color">Gallery</span></h1>
+    <div class="container-gallery">
+      <div class="gallery-item">
+        <img src="bedroom.jpg" alt="Master Bedroom">
+        <div class="gallery-info">
+          <h2>Master Bedroom</h2>
+          <p>A luxurious and serene space for relaxation.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="bedroom1.jpg" alt="Family Room">
+        <div class="gallery-info">
+          <h2>Family Room</h2>
+          <p>The perfect space for family bonding and comfort.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="Home bg.jpg" alt="Swimming Pool">
+        <div class="gallery-info">
+          <h2>Swimming Pool</h2>
+          <p>A refreshing retreat to relax and unwind.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="kitchen.jpg" alt="Dining Area">
+        <div class="gallery-info">
+          <h2>Dining Area</h2>
+          <p>A cozy area for delightful meals and gatherings.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="kitchenv1.jpg" alt="Kitchen">
+        <div class="gallery-info">
+          <h2>Kitchen</h2>
+          <p>Modern and functional, designed for culinary creativity.</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="livingroomv1.jpg" alt="Entertainment Room">
+        <div class="gallery-info">
+          <h2>Entertainment Room</h2>
+          <p>A lively space for movies, games, and fun activities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div>
+    <h2 class="head"><span class="orange-color">Contact </span> Us</h2>
+  </div>
+    <section class="Info" id="contact">
+      
+      <div class="image-column">
+        <a href="https://www.google.com/maps/place/L+Casa+Private+Villa/@14.1285083,122.9635403,17z/data=!3m1!4b1!4m6!3m5!1s0x3398af003d1083ad:0xa60c12143ab1f90d!8m2!3d14.1285083!4d122.9661152!16s%2Fg%2F11w57y98p0?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+          <div class="image-container">
+            <img src="choose.gif" alt="Location Image" class="location-image" style="width:9; height: 33rem;">
+            <div class="image-text">Our Address: Purok 5, Baragay Bagasbas Road, Daet, Camarines Norte</div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="form-column">
+        <div class="container">
+          <form action="https://formspree.io/f/mvojeyal" method="POST">
+            <div class="row2">
+              <h1 class="head1">For Online Enquiry...</h1>
+              <div class="col-75">
+                <input type="text" id="fname" name="name" placeholder="Full Name: " required>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="E-Mail: " required>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="Subject: " required>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="col-75">
+                <textarea id="message" name="message" placeholder="Message: " style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row2">
+              <input type="submit" value="SUBMIT">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class="footerlogo">
+            <img src="Lcasa Logo.jpg" alt="footerL" width="115rem" />
+        </div>
+    
+        <div class="footer-container">
+            <div class="wrapper"></div>
+    
+            <!-- Section for 'Want to join and connect with us?' -->
+            <div class="footerloc">
+                <h3>Want to join and connect with us?</h3>
+                <p>Stay connected and follow our social media for the latest updates, special offers, and behind-the-scenes L Casa magic.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="secquicklink1">
+                <h3><b>Web link:</b></h3>
+                <ul>
+                    <li><a href="index.html">Home</a><a href="About.html"> About</a></li>
+                    <li><a href="Rates.html">Rates</a><a href="Gallary.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Location -->
+            <div class="secquicklink2">
+                <h3><b>Location:</b></h3>
+                <ul>
+                    <li><p>Purok 5, Bargy. Borabod</p></li>
+                    <li><p>Bagasbas Road Camarines Norte</p></li>
+                    <li><p>Philippines</p></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="secquicklink3">
+                <h3><b>Contact Us:</b></h3>
+                <ul class="icon">
+                    <li><a href="https://www.facebook.com/profile.php?id=61562168732007" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="mailto:example@example.com"><i class="fa fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="copyrightText">
+            <p>Copyright 2024 AAMJ - Crafting Digital Excellence. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    
+          
+    
+<script src="LCasa.js"></script>
+
+
+</body>
+</html>
